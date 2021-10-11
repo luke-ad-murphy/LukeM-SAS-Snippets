@@ -1,0 +1,9 @@
+PROC SQL;
+CREATE TABLE outa AS
+SELECT *, 'in1' AS dset
+ FROM in1
+ OUTER UNION CORR
+SELECT *, 'in2' AS dset
+ FROM in2;
+QUIT;
+RUN;
