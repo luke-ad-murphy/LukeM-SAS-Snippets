@@ -1,0 +1,10 @@
+data asis5.lm_1330_match3;
+set asis5.lm_1330_match3;
+addon1 = scan(current_addons,1,",");
+addon2 = scan(current_addons,2,",");
+addon3 = scan(current_addons,3,",");
+addon4 = scan(current_addons,4,",");
+addon5 = scan(current_addons,5,",");
+addon6 = scan(current_addons,6,",");
+addon7 = scan(current_addons,7,",");
+run;
