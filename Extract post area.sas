@@ -1,0 +1,15 @@
+data data (drop=pcode2 parea1 rename=(parea2=parea));
+set data;
+pcode2=COMPRESS(postcode);
+parea1=SUBSTR(pcode2,1,3);
+parea2=COMPRESS(parea1,"1");
+parea2=COMPRESS(parea2,"2");
+parea2=COMPRESS(parea2,"3");
+parea2=COMPRESS(parea2,"4");
+parea2=COMPRESS(parea2,"5");
+parea2=COMPRESS(parea2,"6");
+parea2=COMPRESS(parea2,"7");
+parea2=COMPRESS(parea2,"8");
+parea2=COMPRESS(parea2,"9");
+parea2=COMPRESS(parea2,"0");
+run;

@@ -1,0 +1,1 @@
+prxmatch("/^[A-Z]{1,2}\d{1,2}[A-Z]{0,1}\s+\d[A-Z]{2}$/",trim(postcode)) ne 0
