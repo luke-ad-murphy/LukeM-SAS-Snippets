@@ -1,0 +1,12 @@
+%macro numobs(dsn);
+%global numobs numvars;
+data _null_;
+set &dsn (obs=1) NOBS=obscnt;
+array aa {*} $ _character_;
+array nn {*} _numeric_;
+vars=dim(aa)+dim(nn);
+call symput('numvars',vars);
+call symput('numobs',obscnt);
+stop;
+run;
+%mend numobs;
