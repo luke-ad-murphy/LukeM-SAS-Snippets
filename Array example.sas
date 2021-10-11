@@ -1,0 +1,10 @@
+rsubmit;
+data overlap;
+set overlap;
+array dot(24) Add_E_mail -- X___Series_Silver;
+ do i= 1 to 24; 
+   if dot(i) = . then dot(i) = 0;
+   if dot(i) GE 1 then dot(i) = 1;
+end;
+run;
+endrsubmit;

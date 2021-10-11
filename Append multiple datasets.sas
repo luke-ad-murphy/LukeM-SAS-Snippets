@@ -1,0 +1,20 @@
+**** append the datasets together ****; 
+
+rsubmit;
+proc datasets lib = asis5 nolist;
+* will create dataset lm_rlh in lib asis5;
+* append one file at a time;
+append base = lm_rlh data = RLH_200706_sum force;
+append base = lm_rlh data = RLH_200707_sum force;
+append base = lm_rlh data = RLH_200708_sum force;
+append base = lm_rlh data = RLH_200709_sum force;
+append base = lm_rlh data = RLH_200710_sum force;
+append base = lm_rlh data = RLH_200711_sum force;
+append base = lm_rlh data = RLH_200712_sum force;
+append base = lm_rlh data = RLH_200801_sum force;
+append base = lm_rlh data = RLH_200802_sum force;
+append base = lm_rlh data = RLH_200803_sum force;
+append base = lm_rlh data = RLH_200804_sum force;
+append base = lm_rlh data = RLH_200805_sum force;
+quit;
+endrsubmit;
